@@ -1,0 +1,19 @@
+name: Build WoodCalc Pro APK
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Upload APK Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: WoodCalcPro-v2.0
+          path: |
+            index.html
+            icon.png
